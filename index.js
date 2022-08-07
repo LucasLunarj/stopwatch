@@ -2,10 +2,17 @@ let on = true;
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
+let startButton = document.querySelector("#start");
+let pauseButton = document.querySelector("#pause");
+let stopButton = document.querySelector("#reset");
 let count;
+pauseButton.style.display = "none";
+stopButton.style.display = "none";
 function start() {
   count = setInterval(timer, 1000);
-  document.querySelector("#start").style.display = "none";
+  startButton.style.display = "none";
+  pauseButton.style.display = "inline";
+  stopButton.style.display = "inline";
 }
 function timer() {
   seconds++;
@@ -21,11 +28,18 @@ function timer() {
       2,
       "0"
     )}`;
-  } else if (minutes > 60) {
+  } else if (minutes > 59) {
+    minutes = -1;
+    hours++;
     document.querySelector(".hours").innerHTML = `${hours}`;
   }
 }
-
+function pause() {
+  clearInterval(count);
+  startButton.style.display = "inline";
+  pauseButton.style.display = "none";
+  stopButton.style.display = "none";
+}
 function reset() {
   clearInterval(count);
   seconds = -1;
@@ -35,4 +49,6 @@ function reset() {
   document.querySelector(".minutes").innerHTML = `00`;
   document.querySelector(".hours").innerHTML = `00`;
   document.querySelector("#start").style.display = "inline";
+  pauseButton.style.display = "none";
+  stopButton.style.display = "none";
 }

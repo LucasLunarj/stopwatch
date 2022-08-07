@@ -55,6 +55,13 @@ body {
 #start:hover {
   box-shadow: 0 0 1em green;
 }
+#pause {
+  border: none;
+  background-color: #ffb242;
+}
+#pause:hover {
+  box-shadow: 0 0 1em #df8f19;
+}
 #reset {
   background-color: rgb(214, 137, 137);
   border: none;
