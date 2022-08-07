@@ -24,6 +24,7 @@ body {
   width: 80%;
   height: 80%;
 }
+
 .box {
   display: flex;
   flex-direction: column;
@@ -31,7 +32,7 @@ body {
   align-items: center;
   height: 150px;
   width: 90px;
-  font-size: 60px;
+  font-size: 80px;
   color: #30303a;
   /* box-shadow: 0 0 1em #002b5b; */
 }
@@ -63,8 +64,8 @@ body {
 }
 
 .buttons {
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
   font-size: 18px;
   font-weight: bold;
