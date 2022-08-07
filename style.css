@@ -54,12 +54,14 @@ body {
 }
 #start:hover {
   box-shadow: 0 0 1em green;
+  cursor: pointer;
 }
 #pause {
   border: none;
   background-color: #ffb242;
 }
 #pause:hover {
+  cursor: pointer;
   box-shadow: 0 0 1em #df8f19;
 }
 #reset {
@@ -67,6 +69,7 @@ body {
   border: none;
 }
 #reset:hover {
+  cursor: pointer;
   box-shadow: 0 0 1em red;
 }
 
