@@ -16,21 +16,22 @@ function start() {
 }
 function timer() {
   seconds++;
-  console.log(seconds);
   document.querySelector(".seconds").innerHTML = `${String(seconds).padStart(
     2,
     "0"
   )}`;
-  if (seconds > 59) {
-    seconds = -1;
-    minutes++;
+  if (seconds >= 60) {
+    seconds = 0;
+    minutes += 1;
+    console.log(minutes);
     document.querySelector(".minutes").innerHTML = `${String(minutes).padStart(
       2,
       "0"
     )}`;
-  } else if (minutes > 59) {
-    minutes = -1;
-    hours++;
+  } else if (minutes >= 60) {
+    minutes += 1;
+    console.log(hours);
+    hours = hours + 1;
     document.querySelector(".hours").innerHTML = `${hours}`;
   }
 }
