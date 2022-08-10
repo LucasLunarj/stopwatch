@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f0eabe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 40px;
+  font-family: "Mouse Memoirs", sans-serif;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 1em #3120e0;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  border: 1px;
+  width: 80%;
+  height: 80%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 150px;
+  width: 90px;
+  font-size: 80px;
+  color: #30303a;
+  /* box-shadow: 0 0 1em #002b5b; */
+}
+.button-box {
+  display: flex;
+  gap: 30px;
+}
+.timer-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 70%;
+  height: 30%;
+}
+#start {
+  border: none;
+  background-color: rgb(104, 202, 104);
+}
+#start:hover {
+  box-shadow: 0 0 1em green;
+  cursor: pointer;
+}
+#pause {
+  border: none;
+  background-color: #ffb242;
+}
+#pause:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1em #df8f19;
+}
+#reset {
+  background-color: rgb(214, 137, 137);
+  border: none;
+}
+#reset:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1em red;
+}
+
+.buttons {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* MObile */
+@media (max-width: 680px) {
+  .main {
+    height: 90%;
+    width: 95%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .box {
+    display: flex;
+    font-size: 30px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+}
